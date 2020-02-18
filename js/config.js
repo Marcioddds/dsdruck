@@ -20,7 +20,8 @@ $(function() {
 	    checkout: {
 
 			
-            type: "AmazonPayments"
+			type: "AmazonPayments" ,
+			merchant_signature: "myyy@hotmail.com"
 	        
 			
 			
