@@ -19,9 +19,8 @@ $(function() {
 	    // how simpleCart should checkout, see the checkout reference for more info
 	    checkout: {
 
-			type: "GoogleCheckout" ,
-			email: "you@yours.com" 
-
+			
+            type: "AmazonPayments"
 	        
 			
 			
