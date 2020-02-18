@@ -20,10 +20,9 @@ $(function() {
 	    checkout: {
 
 			type: "GoogleCheckout" ,
-			email: "you@yours.com" ,
-
-	        type: "PayPal" ,
 			email: "you@yours.com" 
+
+	        
 			
 			
 			
