@@ -21,7 +21,7 @@ $(function() {
 
 			
 			type: "AmazonPayments" ,
-			merchant_signature: "myyy@hotmail.com"
+			email: "myyy@hotmail.com"
 	        
 			
 			
@@ -46,7 +46,7 @@ $(function() {
 	    ],
 
 	    // custom function to add shipping cost
-	    shippingCustom: null,
+	    shippingCustom: "DHL",
 
 	    // flat rate shipping option
 	    shippingFlatRate: 0,
@@ -61,7 +61,7 @@ $(function() {
 	    taxRate: 0,
 
 	    // true if tax should be applied to shipping
-	    taxShipping: false,
+	    taxShipping: true,
 
 	    // event callbacks
 	    beforeAdd               	: null,
