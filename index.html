@@ -1,169 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>simpleStore</title>
-    <meta name="description" content="A clean, responsive storefront boilerplate with no database or backend">
-    <meta name="author" content="">
-
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- FONT
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/imports.min.css">
-    <link rel="stylesheet" href="css/simpleStore.min.css">
-
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
+ <head>
+    <title> DS </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="DS">
+  <meta name="description" content="T-shirts">
+  <meta name="keywords" content="T-shirts">
+  <link href="css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  
+  
+  <script type="text/javascript"></script>
+  
 </head>
 <body>
+ <header>
+     <div class="content" id="navbar">
+         <div id="menu">
+             <ul>
+                 <li><a class="a" href="#">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <nav class="nav">
+                        <div>
+                     <ul id="dropdown">
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="#">Produtos</a></li>
+                         <li><a href="#">rrrtr</a></li>
+                         <li><a href="#">Contactos</a></li>
+                         <li><a href="#">Contactos</a></li>
+                         <li><a href="#">Sobre nós</a></li>
+                         <li><a href="#">Contactos</a></li>
+                     </ul></div>
+                    </nav> 
+                </li>
+             </ul>
+         </div>
+         <div id="logo">
+             <img class="logo" src="resources/images/preto.jpg">
+         </div>
+         <div id="contactos">
+             <a class="fac" href="#"><i class="fa fa-facebook fa-lg"></i></a>
+             <a class="ins" href="#"><i class="fa fa-instagram fa-lg"></i></a>
+         </div>
+     </div>
+ </header>  
+ 
 
-    <!-- Primary Page Layout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container simpleStore">
-        <div class="row">
-            <a class="brand" href="#"></a>
-            <a class="button button-primary u-pull-right simpleStore_viewCart">
-                <i class="fa fa-shopping-cart"></i> Cart <span class="simpleCart_total"></span>
-            </a>
-            <h5 class="item_name" value="name"></h5>
+   <section class="container">
+       <div class="fullBackground">
+       <div class="text">
+         <h2 class="caption">Todo tipo de personalizações</h2>
+         <h4>Cria a tua propria roupa</h4>
+         <div class="button">
+           <a href="#grid"><h3>Saber mais</h3></a>
+         </div>
         </div>
-        <div class="simpleStore_container"></div>
-        <div class="simpleStore_cart_container"></div>
     </div>
+   </section> 
+   <section class="container" id="grid">
+       <div>
+
+       </div>
+   </section>
+   <section name="grid" class="grid">
+       <a class="grid1" href="shop.html">
+           <p>Descobre a grande variedade de produtos que dispomos para personalizações.</p>
+        <div class="button">
+          <h3>Saber mais</h3></div></a>
+
+       <a class="grid2" href="shop2.html">
+        <p>Personaliza tshirts</p>
+        <div class="button">
+            <h3>Saber mais</h3></div></a>
+
+       <a class="grid3" href="#"><p>Personaliza Bonés</p>
+        <div class="button">
+            <h3>Saber mais</h3></div></a>
+
+       <a class="grid4" href="#"><p>Personaliza Mochilas</p>
+        <div class="button">
+            <h3>Saber mais</h3></div></a>
+
+       <a class="grid5" href="#"><p>Personalize a sua roupa de trabalho</p>
+        <div class="button">
+            <h3>Saber mais</h3></div></a>
+   </section>
+
+   <footer>
+    <nav class="newsletter">
+        <h4>Subscreve a Newsletter</h4>
+        <div><a href="#">Subscreve</a></div>
+    </nav>
+</footer>
+<nav class="design">
+    <span>© 2020 DS, All Rights Reserved | Created by MS</span>
+    
     
 
-    <!-- Templates
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</nav>
 
-    <!-- Products View -->
-    <script id="products-template" type="x-template">
-        <div class="column">
-            <div class="simpleCart_shelfItem">
-                <img src="" class="item_thumb"/>
-                <div class="row">
-                    <h5 class="item_name" value="name"></h5>
-                    <div class="simpleStore_getDetail_container">
-                        <span class="item_price"></span>
-                    </div>
-                    <div class="simpleStore_getDetail_container">
-                        <a class="button u-pull-right simpleStore_getDetail">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-    <nav id="products-template" type="x-template">
-        <div class="column">
-            <div class="simpleCart_shelfItem">
-                <img src="" class="item_thumb"/>
-                <div class="row">
-                    <h5 className="item_name">"name"</h5>
-                    <div class="simpleStore_getDetail_container">
-                        <span class="item_price"></span>
-                    </div>
-                    <div class="simpleStore_getDetail_container">
-                        <a class="button u-pull-right simpleStore_getDetail">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </nav>
-        
-    
-
-    <!-- Product Detail View -->
-    <script id="product-detail-template" type="x-template">
-        <div class="simpleCart_shelfItem simpleStore_detailView">
-            <a href="#" class="close view_close">&times;</a>
-
-            <div class="row">
-                <div class="four columns">
-                    <img src="" class="item_thumb"/>
-                </div>
-                <div class="eight columns">
-                    <h5 class="item_name"></h5>
-
-                    <p class="item_description"></p>
-                    <span class="item_price"></span>
-
-                    <div class="qty">
-                        <label>QTY</label>
-                        <input type="number" value="1" min="1" step="1" class="item_Quantity">
-                    </div>
-                    <div class="simpleStore_options"></div>
-                    <a class="item_add button u-pull-right" href="javascript:;">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </script>
-
-    <!-- Cart View -->
-    <script id="cart-template" type="x-template">
-        <div class="simpleStore_cart">
-            <h2>Cart</h2>
-            <a href="#" class="close">&times;</a>
-
-            <div class="row">
-                <div class="eight columns">
-                    <div class="simpleCart_items"></div>
-                    <a href="javascript:;" class="simpleCart_empty u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
-                </div>
-                <div class="four columns">
-                    <div class="cart_info">
-                        <div class="cart_info_item cart_itemcount">Items:
-                            <div class="simpleCart_quantity"></div>
-                        </div>
-                        <div class="cart_info_item cart_taxrate">Tax Rate:
-                            <div class="simpleCart_taxRate"></div>
-                        </div>
-                        <div class="cart_info_item cart_tax">Tax:
-                            <div class="simpleCart_tax"></div>
-                        </div>
-                        <div class="cart_info_item cart_shipping">Shipping:
-                            <div class="simpleCart_shipping"></div>
-                        </div>
-                        <div class="cart_info_item cart_total"><b>Total:
-                            <div class="simpleCart_grandTotal"></div>
-                        </b></div>
-                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-
-    <!-- Error View -->
-    <script id="error-template" type="x-template">
-        <div class="error">
-            <b>Sorry, something went wrong :(</b>
-			<p class="error_text"></p>
-			<a href="#" class="close alert_close">&times;</a>
-        </div>
-    </script>
-
-<!-- End Document
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/fullclip.min.js"></script>
+   <script>
+       $('.fullBackground').fullClip({
+           images: ['resources/images/camisolas3.jpg', 'resources/images/camisolas5.jpg', 'resources/images/camisolas7.jpg', 'resources/images/chapeu1.jpg'],
+           transitionTime: 1000,
+           wait: 5000,
+       });
+   </script>
 </body>
-
-<!-- Scripts
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/simpleCart.min.js"></script>
-<script src="js/simpleStore.min.js"></script>
-<script src="products.json"></script>
-<script src="js/config.js"></script>
-
 </html>

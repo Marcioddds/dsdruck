@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title> DS </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="DS">
+  <meta name="description" content="T-shirts">
+  <meta name="keywords" content="T-shirts">
+  <link href="css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+  <script type="text/javascript"></script>
+  
+</head>
+<body>
+ <header>
+     <div class="content" id="navbar">
+         <div id="menu">
+             <ul>
+                 <li><a class="a" href="#">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <nav class="nav">
+                        <div>
+                     <ul id="dropdown">
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="#">Produtos</a></li>
+                         <li><a href="#">rrrtr</a></li>
+                         <li><a href="#">Contactos</a></li>
+                         <li><a href="#">Contactos</a></li>
+                         <li><a href="#">Sobre nós</a></li>
+                         <li><a href="#">Contactos</a></li>
+                     </ul></div>
+                    </nav> 
+                </li>
+             </ul>
+         </div>
+         <div id="logo">
+             <img class="logo" src="resources/images/preto.jpg">
+         </div>
+         <div id="contactos">
+             <a class="fac" href="#"><i class="fa fa-facebook fa-lg"></i></a>
+             <a class="ins" href="#"><i class="fa fa-instagram fa-lg"></i></a>
+         </div>
+     </div>
+ </header>  
+
+   <section class="container">
+       <div class="fullBackground">
+       <div class="text">
+         <h2 class="caption">Todo tipo de personalizações</h2>
+         <h4>Cria a tua propria roupa</h4>
+         <div class="button">
+           <a href="#grid"><h3>Saber mais</h3></a>
+         </div>
+        </div>
+    </div>
+   </section> 
+<br>
+
+   <div id="app">
+
+    <div class="container">
+      <nav class="well well-sm">
+        
+          <div class="text-right pull-right">
+           <span class="stats">
+            {{ cart.items.length }} 
+            <template v-if="cart.items.length == 1">item</template>
+            <template v-else>items</template> 
+            in cart, totalling {{ cartTotal | currency }}
+            <button class="btn btn-primary" @click="isShowingCart = true">View Cart</button>
+           </span>
+          </div>
+        <div class="btn-group">
+          <a id="list" @click="listWrapper" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-th-list"></span>List
+          </a>
+          <a @click="gridWrapper" id="grid" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-th"></span>Grid
+          </a>
+        </div>
+    </div>
+    </nav>
+    
+  
+    <div class="container">
+      <div v-if="!isShowingCart" id="products" class="row">
+      <div v-for="product in products" :class="groupWrapper"  class="item">
+      <div class="thumbnail">
+      <img class="group list-group-image"  :src="product.picture" alt="" />
+      <div class="caption">
+        <h4 class="group inner list-group-item-heading">
+         {{product.name}}</h4>
+        <p class="group inner list-group-item-text">
+          {{product.description}}</p>
+        <div class="row">
+          <div class="aa">
+            <p class="lead">
+              {{product.price | currency}}</p>
+          </div>
+          <div class="bb">
+            <div class="number-in-stock" :class="{ few: product.inStock < 10 && product.inStock > 0, none: product.inStock == 0 }" >
+               {{ product.inStock }} in stock
+            </div>
+            <button class="btn btn-success" @click="addProductToCart(product)" :disabled="product.inStock == 0" >Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    
+    <div v-else>
+      <h1>Cart</h1>
+      <table v-if="cart.items.length > 0" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in cart.items">
+            <td>{{ item.product.name }}</td>
+            <td>
+              {{ item.quantity }} &nbsp;
+              <button class="btn btn-success" @click="increaseQuantity(item)" :disabled="item.product.inStock == 0">+</button>
+              <button class="btn btn-danger" @click="decreaseQuantity(item)">-</button>
+            </td>
+            <td>{{ item.quantity * item.product.price | currency }}</td>
+          </tr>
+          
+          <tr>
+            <td class="text-right" colspan="2">
+              <strong>Subtotal</strong>
+            </td>
+            
+            <td>{{ cartTotal | currency }}</td>
+          </tr>
+          
+          <tr>
+            <td class="text-right" colspan="2">
+              <strong>Taxes</strong>
+            </td>
+            
+            <td>{{ taxAmount | currency }}</td>
+          </tr>
+          
+          <tr>
+            <td class="text-right" colspan="2">
+              <strong>Grand total</strong>
+            </td>
+            
+            <td>{{ cartTotal + taxAmount | currency }}</td>
+          </tr>
+          
+          <tr>
+            <td colspan="2"></td>
+            <td><button class="btn btn-success" @click="checkout">Checkout</button></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p v-else>Your cart is currently empty.</p>
+          
+        
+    </div>
+    </div>
+    
+    
+    </div>
+  </div>
+
+  <script src="js/js.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/fullclip.min.js"></script>
+  <script>
+    $('.fullBackground').fullClip({
+        images: ['resources/images/camisolas3.jpg', 'resources/images/camisolas5.jpg', 'resources/images/camisolas7.jpg', 'resources/images/chapeu1.jpg'],
+        transitionTime: 1000,
+        wait: 5000,
+    });
+</script>
+
+   </body>
+   </html>
+   
