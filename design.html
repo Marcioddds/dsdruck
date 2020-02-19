@@ -12,7 +12,12 @@
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/FancyProductDesigner-all.min.css" />
+  
+  <script src="js/fabric.min.js" type="text/javascript"></script>
+<!-- The plugin itself -->
+<script src="js/FancyProductDesigner-all.min.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
   
   <script type="text/javascript"></script>
   
@@ -60,34 +65,11 @@
         </div>
     </div>
    </section> 
-   <section class="container" id="grid">
-       <div>
+   <main>
+<script id="fpd"></script>
+  <div id="fpd"></script>> </div>
 
-       </div>
-   </section>
-   <section name="grid" class="grid">
-       <a class="grid1" href="store.html">
-           <p>Descobre a grande variedade de produtos que dispomos para personalizações.</p>
-        <div class="button">
-          <h3>Saber mais</h3></div></a>
-
-       <a class="grid2" href="design.html">
-        <p>Personaliza tshirts</p>
-        <div class="button">
-            <h3>Saber mais</h3></div></a>
-
-       <a class="grid3" href="#"><p>Personaliza Bonés</p>
-        <div class="button">
-            <h3>Saber mais</h3></div></a>
-
-       <a class="grid4" href="#"><p>Personaliza Mochilas</p>
-        <div class="button">
-            <h3>Saber mais</h3></div></a>
-
-       <a class="grid5" href="#"><p>Personalize a sua roupa de trabalho</p>
-        <div class="button">
-            <h3>Saber mais</h3></div></a>
-   </section>
+</main>
 
    <footer>
     <nav class="newsletter">
@@ -102,6 +84,17 @@
 
 </nav>
 
+<script src="js/fabric.min.js" type="text/javascript"></script>
+<!-- The plugin itself -->
+<script src="js/FancyProductDesigner-all.min.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+  
+
+
+   <script src="json/designs.json"></script>
+   <script src="json/products.json"></script>
+
    <script src="js/jquery.min.js"></script>
    <script src="js/fullclip.min.js"></script>
    <script>
@@ -110,6 +103,31 @@
            transitionTime: 1000,
            wait: 5000,
        });
+   </script>
+
+   <script>
+       $(document).ready(function(){
+
+var $fpd = $('#fpd'),
+      pluginOpts = {
+        productsJSON: 'json/designs.json',
+      designsJSON: 'json/products.json',
+        stageWidth: 1200, 
+        stageHeight: 800
+     };
+
+var yourDesigner = new FancyProductDesigner($fpd, pluginOpts);
+
+
+
+//you can listen to events
+$fpd.on('productCreate', function() {
+
+    //api methods can be used
+    yourDesigner.print()
+
+});
+});
    </script>
 </body>
 </html>
