@@ -599,67 +599,62 @@ footer h4{
     
 }
 
+
+
+
+
+
 /*shopcart*/
+#gridshop{
+  font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-left: 50px;
 
-#products{
-    display: inline-flex;
-}
-.glyphicon { margin-right:5px; }
-.thumbnail
-{
-  margin-bottom: 20px;
-  padding: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+     row-gap: 20px;
+     column-gap: 8px;
+     align-content: center;
+     align-items: center;
+     justify-content: space-around;
+     text-align: center;
 
-.item.list-group-item
-{
-  float: none;
-  width: 100%;
-  background-color: #fff;
-  margin-bottom: 10px;
-}
-.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
-{
-  background: #428bca;
 }
 
-.item.list-group-item .list-group-image
-{
-  margin-right: 10px;
+.shop-item{
+  width:300px;
+  height:420px;
+  background-color: rgb(240, 238, 234);
 }
-.item.list-group-item .thumbnail
-{
-  margin-bottom: 0px;
-}
-.item.list-group-item .caption
-{
-  padding: 9px 9px 0px 9px;
-}
-.item.list-group-item:nth-of-type(odd)
-{
-  background: #eeeeee;
-}
+.shop-item:hover{
+  opacity: 0.8;
+  border-style: ridge;
+  border-width: 2px;
+  border-color: darkgray;
 
-.item.list-group-item:before, .item.list-group-item:after
-{
-  display: table;
-  content: " ";
 }
-
-.item.list-group-item img
-{
+.shop-item img{
+  width: 300px;
+  height: 300px;
+}
+#buttonadd{
+  float: right;
+  margin-top: 70px;
+  background-color: rgb(143, 133, 126);
+  opacity: 0.9;
+}
+#buttonadd:hover{
+cursor: pointer;;
+}
+.shop-item-price{
+float: left;
+margin-top: 70px;
+font-size: 20px;
+margin-left: -20px;
+}
+.shop-item-title{
   float: left;
 }
-.item.list-group-item:after
-{
-  clear: both;
+.section-header{
+  padding-left: 250px;
+  
 }
-.list-group-item-text
-{
-  margin: 0 0 11px;
-}
-
-/*shopcat2*/

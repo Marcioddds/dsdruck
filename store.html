@@ -1,80 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>The Generics | Store</title>
-        <meta name="description" content="This is the description">
-        <link rel="stylesheet" href="styles.css" />
-        <script src="store.js" async></script>
-    </head>
-    <body>
-        <header class="main-header">
-            <nav class="main-nav nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="store.html">STORE</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
-            <h1 class="band-name band-name-large">The Generics</h1>
-        </header>
-        <section class="container content-section">
-            <h2 class="section-header">MUSIC</h2>
-            <div class="shop-items">
+<html lang="en">
+ <head>
+    <title> DS </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="DS">
+  <meta name="description" content="T-shirts">
+  <meta name="keywords" content="T-shirts">
+  <link href="css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/FancyProductDesigner-all.min.css" />
+  <meta name="description" content="This is the description">
+  <link rel="stylesheet" href="resources/css/style.css" />
+  <script src="store.js" async></script>
+  <script type="text/javascript"></script>
+  
+</head>
+<body>
+ <header>
+     <div class="content" id="navbar">
+         <div id="menu">
+             <ul>
+                 <li><a class="a" href="#">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <nav class="nav">
+                        <div>
+                     <ul id="dropdown">
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="#">Produtos</a></li>
+                         <li><a href="#">rrrtr</a></li>
+                         <li><a href="#">Contactos</a></li>
+                         <li><a href="#">Contactos</a></li>
+                         <li><a href="#">Sobre nós</a></li>
+                         <li><a href="#">Contactos</a></li>
+                     </ul></div>
+                    </nav> 
+                </li>
+             </ul>
+         </div>
+         <div id="logo">
+             <img class="logo" src="resources/images/preto.jpg">
+         </div>
+         <div id="contactos">
+             <a class="fac" href="#"><i class="fa fa-facebook fa-lg"></i></a>
+             <a class="ins" href="#"><i class="fa fa-instagram fa-lg"></i></a>
+         </div>
+     </div>
+ </header>  
+ 
+
+   <section class="container">
+       <div class="fullBackground">
+       <div class="text">
+         <h2 class="caption">Todo tipo de personalizações</h2>
+         <h4>Cria a tua propria roupa</h4>
+         <div class="button">
+           <a href="#grid"><h3>Saber mais</h3></a>
+         </div>
+        </div>
+    </div>
+   </section> 
+
+        
+        <section class="container content-section" >
+            <h2 class="section-header">DS store</h2>
+            <div class="shop-items" id="gridshop" name="grid">
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 1</span>
-                    <img class="shop-item-image" src="Images/Album 1.png">
+                    
+                    <img class="shop-item-image" src="resources/images/a.jpg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">Album 1</span>
                         <span class="shop-item-price">$12.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 2</span>
-                    <img class="shop-item-image" src="Images/Album 2.png">
+                    
+                    <img class="shop-item-image" src="resources/images/a2.jpg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">Album 2</span>
                         <span class="shop-item-price">$14.99</span>
-                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 3</span>
-                    <img class="shop-item-image" src="Images/Album 3.png">
+                    
+                    <img class="shop-item-image" src="resources/images/a4.jpg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">Album 3</span>
                         <span class="shop-item-price">$9.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 4</span>
-                    <img class="shop-item-image" src="Images/Album 4.png">
+                   
+                    <img class="shop-item-image" src="resources/images/a5.jpg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">Album 4</span>
                         <span class="shop-item-price">$19.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
                     </div>
                 </div>
+                <div class="shop-item">
+                    
+                    <img class="shop-item-image" src="resources/images/a6.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Album 5</span>
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    
+                    <img class="shop-item-image" src="resources/images/a7.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Album 6</span>
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            
+            <div class="shop-item">
+                
+                <img class="shop-item-image" src="resources/images/a8.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-title">Album 7</span>
+                    <span class="shop-item-price">$19.99</span>
+                    <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">ADD TO CART</button>
+                </div>
+              </div>  
             </div>
         </section>
-        <section class="container content-section">
-            <h2 class="section-header">MERCH</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title">T-Shirt</span>
-                    <img class="shop-item-image" src="Images/Shirt.png">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$19.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Coffee Cup</span>
-                    <img class="shop-item-image" src="Images/Cofee.png">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$6.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <section class="container content-section">
             <h2 class="section-header">CART</h2>
             <div class="cart-row">
@@ -90,27 +149,27 @@
             </div>
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
-        <footer class="main-footer">
-            <div class="container main-footer-container">
-                <h3 class="band-name">The Generics</h3>
-                <ul class="nav footer-nav">
-                    <li>
-                        <a href="https://www.youtube.com" target="_blank">
-                            <img src="Images/YouTube Logo.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.spotify.com" target="_blank">
-                            <img src="Images/Spotify Logo.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com" target="_blank">
-                            <img src="Images/Facebook Logo.png">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <footer>
+            <nav class="newsletter">
+                <h4>Subscreve a Newsletter</h4>
+                <div><a href="#">Subscreve</a></div>
+            </nav>
         </footer>
-    </body>
-</html>
+        <nav class="design">
+            <span>© 2020 DS, All Rights Reserved | Created by MS</span>
+            
+            
+        
+        </nav>
+        
+           <script src="js/jquery.min.js"></script>
+           <script src="js/fullclip.min.js"></script>
+           <script>
+               $('.fullBackground').fullClip({
+                   images: ['resources/images/camisolas3.jpg', 'resources/images/camisolas7.jpg', 'resources/images/camisolas5.jpg', 'resources/images/chapeu1.jpg', 'resources/images/a2.jpg'],
+                   transitionTime: 1000,
+                   wait: 5000,
+               });
+           </script>
+        </body>
+        </html>
