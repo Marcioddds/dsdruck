@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <meta name="description" content="This is the description">
   <link rel="stylesheet" href="resources/css/style.css" />
   <script src="store.js" async></script>
@@ -55,7 +55,6 @@
 <br>
 <br>
          <div>
-            <div class="cart-total-price">$0</div>
             
         <span style="font-size: 35px;" id="cart"><a href="#"><i class="fas fa-shopping-cart "></a></i></span>
         
@@ -138,25 +137,37 @@
                     
                     <img class="shop-item-image" src="resources/images/a7.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-title">Album 6</span>
-                        <nav id="quantity1">
-                            <label for="quantity" >Quantidade:</label>
-                                <input type="number" id="quantity" name="quantity" min="1" max="4000"></nav>
-                        <span class="shop-item-price">$19.99</span>
-                        <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">To Cart </button>
-                    </div>
+                        <table>
+                            <span class="shop-item-title">Album 6</span>
+                            <nav >
+                            <table>
+                                 <tr>
+                                    <td class="priceCell">9.88$ p.u</td>
+                                    <td><input type="number" class="form-control text-center quantity" min="1" max="999" value="0"></td>
+                                  </tr>
+                                   <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>
+                        
+                                   <span class="shop-item-price1">$0</span>
+                            </table>
+                        </div>
                 </div>
             
             <div class="shop-item">
                 
                 <img class="shop-item-image" src="resources/images/a8.jpg">
                 <div class="shop-item-details">
+                    <table>
                     <span class="shop-item-title">Album 7</span>
-                    <nav id="quantity1">
-                    <label for="quantity" >Quantidade:</label>
-                        <input type="number" id="quantity" class="quantity" name="quantity" min="1" max="4000"></nav>
-                    <span class="shop-item-price">$19.99</span>
-                    <button class="btn btn-primary shop-item-button" id="buttonadd" type="button">To Cart </button>
+                    <nav >
+                    <table>
+                         <tr>
+                            <td class="priceCell">19.88$ p.u</td>
+                            <td><input type="number" class="form-control text-center quantity" min="1" max="999" value="0"></td>
+                          </tr>
+                           <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>
+                
+                           <span class="shop-item-price1">$0</span>
+                    </table>
                 </div>
               </div>  
             </div>
@@ -167,7 +178,7 @@
             <div class="cart-row">
                 <span class="cart-item cart-header cart-column">ITEM</span>
                 <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                
             </div>
             <div class="cart-items">
             </div>
@@ -193,11 +204,20 @@
            <script src="js/jquery.min.js"></script>
            <script src="js/fullclip.min.js"></script>
            <script>
-               $('.fullBackground').fullClip({
-                   images: ['resources/images/camisolas3.jpg', 'resources/images/camisolas7.jpg', 'resources/images/camisolas5.jpg', 'resources/images/chapeu1.jpg', 'resources/images/a2.jpg'],
-                   transitionTime: 1000,
-                   wait: 5000,
-               });
+               $('.quantity').on('change', getTotals);
+
+function getTotals() {
+  var totals = $('.quantity').map(function() {
+    var $tr = $(this).closest('tr');
+    return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
+  }).get();
+  
+  console.log(totals[0]);
+  document.getElementsByClassName('shop-item-price1')[0].innerText = '$' + parseFloat(totals).toFixed(2)
+  
+}
            </script>
+
+
         </body>
         </html>
