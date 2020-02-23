@@ -641,7 +641,7 @@ footer h4{
 }
 #buttonadd{
   float: right;
-  margin-top: 60px;
+  margin-top: 10px;
   background-color: rgb(240, 238, 234);
   opacity: 0.9;
   font-size: 20px;
@@ -656,9 +656,9 @@ color: gray;
 }
 .shop-item-price{
 float: left;
-margin-top: 70px;
+margin-top: 20px;
 font-size: 20px;
-margin-left: -40px;
+margin-left: 150px;
 }
 .shop-item-title{
   float: left;
@@ -693,4 +693,10 @@ margin-left: -40px;
 #filterList li:hover{ 
   cursor: pointer;
   color: gray;
+}
+#quantity1{
+  padding-top:70px;
+  margin-right: 100px;
+  position: absolute;
+  
 }
