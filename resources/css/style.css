@@ -169,6 +169,10 @@ nav #dropdown li a:hover{
     height: 470px;
      
   }
+  @media (max-width: 700px){.fullBackground{
+    background-size: contain ;
+    height: 180px;
+  }}
 
   .text{
       padding-left: 30px;
@@ -680,6 +684,8 @@ footer #list1 a{
   flex-direction: column;
   margin: 0;
   padding: 0;
+  width: 100%;
+
 }}
 
 .shop-item{
@@ -752,7 +758,7 @@ table input{
 }
 
 @media(max-width:700px){.section-header{
-  padding-left: 50px;
+  padding-left: 10px;
 }}
 .shop-item-title{
   justify-self: center;
@@ -773,7 +779,7 @@ table input{
 }
 
 @media(max-width:700px){#cart{
-  margin-left: 86%;
+  margin-left: 84%;
 }
 }
 /* filter*/
