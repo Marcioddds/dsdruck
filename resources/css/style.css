@@ -36,6 +36,12 @@ header #navbar a{
 header #contactos{
     padding-right: 40px;
 }
+
+@media (max-width: 700px){header #contactos{
+  display: none;
+}}
+
+
 #logo{
     position: relative;
 }
