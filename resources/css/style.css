@@ -165,7 +165,7 @@ nav #dropdown li a:hover{
     background-size: cover;
     left: 0;
     width: 100%;
-    height: 370px;
+    height: 470px;
      
   }
 
@@ -270,6 +270,10 @@ nav #dropdown li a:hover{
           margin-bottom: 30px;
           height: 400px;
         
+    }}
+
+    @media (max-width: 700px) {.grid1 p{
+width: 300px;
     }}
     @media (max-width: 700px) { .grid2 {
         margin-bottom: 30px;
@@ -580,7 +584,7 @@ footer #buttonsub{
     border-color: white;
     color: white;
     font-size: 25px;
-    padding: 30px;
+    padding: 20px;
     
 }
 footer a:hover{
@@ -631,7 +635,7 @@ footer #list1 a{
 .newsletter .redes a{
   color: rgb(250, 249, 249);
   text-decoration: none;
-  padding:30px;
+  padding:20px;
 
 }
 .newsletter .redes{
