@@ -670,12 +670,25 @@ footer #list1 a{
      padding-top: 40px;
 }
 
+@media (max-width: 700px){#gridshop{
+ 
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}}
+
 .shop-item{
   margin-bottom: 40px;
   width:300px;
   height:420px;
   background-color: white;
+  
 }
+@media (max-width: 700px){.shop-item{
+ width: 300px;
+  
+}}
 .shop-item:hover{
   opacity: 0.8;
   border-style: ridge;
@@ -687,9 +700,13 @@ footer #list1 a{
   width: 300px;
   height: 300px;
 }
-#buttonadd{
+@media (max-width: 700px){.shop-item img{
+  width: 300px;
+   
+ }}
+.shop-item button{
   float: right;
-  margin-top: 10px;
+  margin-top: 30px;
   background-color: rgb(240, 238, 234);
   opacity: 0.9;
   font-size: 20px;
@@ -698,15 +715,29 @@ footer #list1 a{
   width: 100px;
   height: 50px;
 }
-#buttonadd:hover{
+.shop-item button:hover{
 cursor: pointer;
 color: gray;
 }
-.shop-item-price{
-float: left;
-margin-top: 20px;
+.shop-item-price1{
+position: absolute;
+margin-top: 80px;
 font-size: 20px;
-margin-left: 150px;
+margin-left: 90px;
+}
+table .priceCell{
+  margin-top: -20px;
+  position: static;
+  padding-right: 80px;
+  font-size: 20px;
+}
+table input{
+  position: static;
+  width: fit-content;
+  margin-top: 60px;
+  margin-left: -180px;
+  background-color:  rgb(240, 238, 234);
+  height: 25px;
 }
 .shop-item-title{
   float: left;
@@ -715,10 +746,32 @@ margin-left: 150px;
   padding-left: 250px;
   
 }
+
+@media(max-width:700px){.section-header{
+  padding-left: 50px;
+}}
 .shop-item-title{
   justify-self: center;
 }
+.carticon a{
+  list-style: none;
+ color: black;
+ text-decoration: none;
+}
+#cart{
+  margin-top: 70px;
+ margin-left: 97%;
+  color: black;
+  position: fixed;
+  text-decoration: black;
+  list-style: none;
+  z-index: 2;
+}
 
+@media(max-width:700px){#cart{
+  margin-left: 90%;
+}
+}
 /* filter*/
 
 #filterList{
@@ -737,7 +790,9 @@ margin-left: 150px;
   padding-right: 30px;
   opacity: 0.9; 
 }
-
+@media (max-width: 700px){#filterList{
+ display: none;
+}}
 #filterList li:hover{ 
   cursor: pointer;
   color: gray;
