@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
     
 }
 header #navbar{
@@ -156,8 +158,15 @@ nav #dropdown li a:hover{
     color: rgb(51, 51, 51);
 }}
     
-
-    
+.tituloloja{
+  text-align: center;
+}
+.tituloloja h2{
+  font-size: 40px;
+}   
+.tituloloja h5{
+  font-size:20px;
+}
 
 /*slider*/
   .fullBackground{
@@ -303,7 +312,7 @@ width: 70px;
 }}
 
   .grid2{
-    background-image: url(../images/a4.jpg);
+    background-image: url(../images/6.jpg);
     background-position: center center;
     background-size: cover;
       grid-row-start: 1;
@@ -324,7 +333,7 @@ width: 70px;
   }
 
   .grid4{
-    background-image: url(../images/camisolas3.jpg);
+    background-image: url(../images/5.jpg);
     background-position: center center;
     background-size: cover;
       grid-row: 3 / 6;
@@ -397,7 +406,7 @@ width: 70px;
   
 }
 .grid1 .button{
-    padding-top: 50px;
+    padding-top: 250px;
     padding-left: 220px;
     display: none;
 }
@@ -862,10 +871,10 @@ transition-duration: 0.5s;
   list-style-type: none;
   text-align: center;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 50px;
-  width: 60%;
-  margin-left: 450px;
+  
+  
   background-color: rgb(240, 238, 234);
   height: 50px;
   font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
