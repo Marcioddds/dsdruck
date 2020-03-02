@@ -18,6 +18,9 @@
   <script src="store.js" async></script>
   <script type="text/javascript"></script>
   <script src="pagination.js"></script>
+  <script src= 
+"https://code.jquery.com/jquery-1.12.4.min.js"> 
+    </script> 
   
 </head>
 <body>
@@ -62,23 +65,35 @@
         <section class="tituloloja">
             <h2>A LOJA</h2>
             <h5>Temos á sua disposiçao de uma variada gama de artigos para personalizar</h5>
-        </section>
+       </section>
     </div>
-        <section class="conainer" id="filter">
-            <ul id="filterList">
-               <a><li>Todos<i class="fas fa-chevron-down fa-xs"></i></li></a>
-               <a><li>T-shirts<i class="fas fa-chevron-down fa-xs"></i></li></a>
-               <a><li>Camisolas<i class="fas fa-chevron-down fa-xs"></i></li></a>
-               <a><li>Bonés<i class="fas fa-chevron-down fa-xs"></i></li></a>
-               <a><li>Vestuario de trabalho<i class="fas fa-chevron-down fa-xs"></i></li></a>
-               <a><li>Outros<i class="fas fa-chevron-down fa-xs"></i></li></a>
-                
-            </ul>
-        </section>
+
+    <div id="filterList">
+    <label id="tudo" for="bt.todos" >Todos </label> 
+    <input type="radio" name="bt" id="bt.todos" value="selectt">
+
+    <label>T-shirts</label>
+    <input type="radio"  id="bt-tshirts" name="bt" value="T-shirts">
+     
+
+    <label id="camisolasfilter" for="bt.camisolas">Camisolas</label> 
+    <input type="radio" name="bt" id="bt.camisolas" value="Camisolas">
+
+    <label >Bonés</label> 
+    <input type="radio" name="bt" id="bt.bones" value="bones">
+
+    <label >Vestuário de trabalho</label> 
+    <input type="radio" name="bt" id="bt.trabalho" value="trabalho">
+</div>
+    
         
+         
         <section class="container content-section" >
-            <div class="shop-items" id="gridshop" name="grid">
-                <div class="shop-item">
+                  
+                    <div class="shop-items" id="gridshop" name="grid">
+                        <div class="T-shirts selectt">
+                <div class="shop-item" >
+                   
                     <img class="shop-item-image" src="resources/images/tshirt/makito keya 130 0.89.jpg">
                     <div class="shop-item-details">
                         <table>
@@ -93,8 +108,10 @@
                                    <span class="shop-item-price1" id="1">€0</span>
                             </table>
                         </div>
-                </div>
-                <div class="shop-item">
+                    </div>
+            </div>
+            <div class="T-shirts selectt">
+                <div class="shop-item" >
                     <img class="shop-item-image" src="resources/images/tshirt/roly atomic 150 1.jpg">
                     <div class="shop-item-details">
                         <table>
@@ -110,6 +127,8 @@
                             </table>
                         </div>
                 </div>
+                </div>
+                <div class="T-shirts selectt">
                 <div class="shop-item">
                     <img class="shop-item-image" src="resources/images/tshirt/makito hecom 1.05.jpg">
                     <div class="shop-item-details">
@@ -126,6 +145,8 @@
                             </table>
                         </div>
                 </div>
+                </div>
+                <div class="T-shirts selectt">
                 <div class="shop-item">
                     <img class="shop-item-image" src="resources/images/tshirt/sols regent 1.24.jpg">
                     <div class="shop-item-details">
@@ -142,8 +163,10 @@
                             </table>
                         </div>
                 </div>
-                
+            </div>
+            <div class="T-shirts selectt">
                 <div class="shop-item">
+                    <div class="tshirts">
                     <img class="shop-item-image" src="resources/images/tshirt/bec new 1.25.jpg">
                     <div class="shop-item-details">
                         <table>
@@ -158,8 +181,11 @@
                                    <span class="shop-item-price1" id="5">€0</span>
                             </table>
                         </div>
+                    </div>
                 </div>
+            </div>
 
+            <div class="bones selectt">
                 <div class="shop-item">
                     <img class="shop-item-image" src="resources/images/a7.jpg">
                     <div class="shop-item-details">
@@ -168,16 +194,18 @@
                             <nav >
                             <table>
                                  <tr>
-                                    <td class="priceCell">9.88$</td>
+                                    <td class="priceCell">9.88€</td>
                                     <td><input type="number" class="form-control text-center quantity" min="1" max="999" value="0"></td>
                                   </tr>
                                    <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>
-                                   <span class="shop-item-price1" id="6">$0</span>
+                                   <span class="shop-item-price1" id="6">€0</span>
                             </table>
                         </div>
                 </div>
+            </div>
             
-            <div class="shop-item">
+            <div class="Camisolas selectt">
+            <div class="shop-item" >
                 <img class="shop-item-image" src="resources/images/a8.jpg">
                 <div class="shop-item-details">
                     <table>
@@ -185,18 +213,27 @@
                     <nav >
                     <table>
                          <tr>
-                            <td class="priceCell">19.88$ </td>
+                            <td class="priceCell">19.88€ </td>
                             <td><input type="number" class="form-control text-center quantity" min="1" max="999" value="0"></td>
                           </tr>
                            <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>               
-                           <span class="shop-item-price1" id="7" >$0</span>
+                           <span class="shop-item-price1" id="7" >€0</span>
                     </table>
                 </div>
               </div>  
             </div>
+                    </div>
             
-            
-              
+                    <script type="text/javascript"> 
+                        $(document).ready(function() { 
+                            $('input[type="radio"]').click(function() { 
+                                var inputValue = $(this).attr("value"); 
+                                var targetBox = $("." + inputValue); 
+                                $(".selectt").not(targetBox).hide(); 
+                                $(targetBox).show(); 
+                            }); 
+                        }); 
+                    </script> 
             
         </section>
         
@@ -250,7 +287,9 @@
            <script src="js/jquery.min.js"></script>
            <script src="js/fullclip.min.js"></script>
            <script src="pagination.js"></script>
-  
+            
+   
+
 
          
 
@@ -262,7 +301,7 @@ function getTotals() {
     return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
   }).get();
   console.log(totals);
-  document.getElementById('1').innerText = '$' + parseFloat(totals[0]).toFixed(2)  
+  document.getElementById('1').innerText = '€' + parseFloat(totals[0]).toFixed(2)  
 }
 </script>
 
@@ -274,7 +313,7 @@ var $tr = $(this).closest('tr');
 return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
-document.getElementById('2').innerText = '$' + parseFloat(totals[1]).toFixed(2)
+document.getElementById('2').innerText = '€' + parseFloat(totals[1]).toFixed(2)
 }
 </script> 
 
@@ -286,7 +325,7 @@ var $tr = $(this).closest('tr');
 return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
-document.getElementById('3').innerText = '$' + parseFloat(totals[2]).toFixed(2)
+document.getElementById('3').innerText = '€' + parseFloat(totals[2]).toFixed(2)
 }
 </script>
          
@@ -298,7 +337,7 @@ var $tr = $(this).closest('tr');
 return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
-document.getElementById('4').innerText = '$' + parseFloat(totals[3]).toFixed(2)
+document.getElementById('4').innerText = '€' + parseFloat(totals[3]).toFixed(2)
 }
 </script>
 <script>
@@ -309,7 +348,7 @@ var $tr = $(this).closest('tr');
 return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
-document.getElementById('5').innerText = '$' + parseFloat(totals[4]).toFixed(2)
+document.getElementById('5').innerText = '€' + parseFloat(totals[4]).toFixed(2)
 }
 </script>
 <script>
@@ -320,7 +359,7 @@ var $tr = $(this).closest('tr');
 return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
-document.getElementById('6').innerText = '$' + parseFloat(totals[5]).toFixed(2)
+document.getElementById('6').innerText = '€' + parseFloat(totals[5]).toFixed(2)
 }
 </script>
 
@@ -332,7 +371,7 @@ var $tr = $(this).closest('tr');
 return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
-document.getElementById('7').innerText = '$' + parseFloat(totals[6]).toFixed(2)
+document.getElementById('7').innerText = '€' + parseFloat(totals[6]).toFixed(2)
 }
 </script>
 

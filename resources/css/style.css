@@ -678,13 +678,10 @@ footer #list1 a{
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
      row-gap: 20px;
      column-gap: 8px;
-     align-content: center;
-     align-items: center;
-     justify-content: space-around;
-     text-align: center;
+     justify-content: space-between;
      background-color: rgb(240, 238, 234) ;
      
-     padding-top: 40px;
+     
 }
 
 @media (max-width: 700px){#gridshop{
@@ -698,10 +695,12 @@ footer #list1 a{
 }}
 
 .shop-item{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width:300px;
   height:420px;
   background-color: white;
+  margin-top: 20px;
+  
   
 }
 @media (max-width: 700px){.shop-item{
@@ -725,7 +724,7 @@ footer #list1 a{
  }}
 .shop-item button{
   float: right;
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: rgb(240, 238, 234);
   opacity: 0.9;
   font-size: 17px;
@@ -741,15 +740,13 @@ transition-duration: 0.5s;
 }
 .shop-item-price1{
 position: absolute;
-margin-top: 80px;
+margin-top: 60px;
 font-size: 20px;
-margin-left: 60px;
+margin-left: 230px;
 }
-table .priceCell{
-  margin-top: -20px;
-  position: static;
-  padding-right: 80px;
-  font-size: 20px;
+.priceCell{
+  position: absolute;
+  margin-top: -05px;
 }
 table input{
   position: static;
@@ -764,9 +761,7 @@ table input:hover{
   background-color: rgb(202, 200, 200);
   transition-duration: 0.5s;
 }
-.shop-item-title{
-  float: left;
-}
+
 .section-header{
   padding-left: 250px;
   
@@ -775,9 +770,7 @@ table input:hover{
 @media(max-width:700px){.section-header{
   padding-left: 10px;
 }}
-.shop-item-title{
-  justify-self: center;
-}
+
 .carticon a{
   list-style: none;
  color: black;
@@ -868,11 +861,14 @@ transition-duration: 0.5s;
 
 /* filter*/
 
+#filterList input{
+  margin-left: -150px;
+}
 #filterList{
   display: flex;
   list-style-type: none;
   text-align: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
   margin-bottom: 50px;
   margin: 30px;
@@ -888,15 +884,10 @@ transition-duration: 0.5s;
 @media (max-width: 700px){#filterList{
  display: none;
 }}
-#filterList li:hover{ 
-  cursor: pointer;
-  color: gray;
-}
-#quantity1{
-  padding-top:70px;
-  margin-right: 100px;
-  
-  
-}
 
+.quantity{
+  position: static;
+  margin-left: 0px;
+  margin-bottom: -20px;
+}
 
