@@ -21,6 +21,7 @@
   <script src= 
 "https://code.jquery.com/jquery-1.12.4.min.js"> 
     </script> 
+     <script defer src="popup.js"></script>
   
 </head>
 <body>
@@ -82,9 +83,12 @@
                 <h4>Logos, flyers, cartões de visita, cartazes publicitarios, camisolas e muito mais, 
                     entre em contato connosco.</h4>
                     <br>
-                    <a class="btserv" href="#">Formulário</a>
+                    <a class="btserv" data-modal-target="#modal" href="#">Formulário</a>
             </div>
             
+
+
+
             <div class="conteudoserv">
                 <h2>Personalizamos todo o tipo de texteis</h2>
                 <span class="texto">
@@ -99,7 +103,7 @@
                 <br>
                 <h4>T-shirts, bonés, mochilas, vestuario de trabalho e muito mais, entra em contato para receber mais informações.</h4>
                     <br>
-                    <a class="btserv" href="#">Formulário</a>
+                    <a class="btserv" data-modal-target="#modal" href="#">Formulário</a>
             </div>
             <div class="conteudoserv"></div>
             <div class="conteudoserv"></div>
@@ -108,6 +112,45 @@
             <div class="conteudoserv"></div>
         </div>
     </section>
+    <section id="formulario">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">Formulário de contato</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="https://formspree.io/mzbgkyop" method="POST" class="p-5 bg-white">
+    
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Nome:</label>
+                            <input type="text" id="nome" class="form-control" name="nome" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="font-weight-bold" for="email">E-mail:</label>
+                            <input type="email" id="mail" class="form-control" name="mail" required>
+                        </div>
+                    </div>
+                    <label class="font-weight-bold" for="message">Mensagem:</label>
+                    <div class="row form-group mb-4">
+                        <div class="col-md-12">
+                            
+                            <textarea name="messagem" id="messagem" cols="30" rows="5" class="form-control1"
+                                placeholder="Estamos ao dispor para resolver as suas duvidas..."></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 text-center">
+                            <input type="submit" value="Enviar Menssagem"
+                                class="btnformulario">
+                        </div>
+                    </div>
+                </form>
+            </div>
+          </div>
+          <div id="overlay"></div></section>
 
 </body>
 
@@ -138,7 +181,7 @@
 
 <nav class="design">
     <span>© 2020 DS, All Rights Reserved | Created by MS</span>
-
+   
  
 </body>
 </html>
