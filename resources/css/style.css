@@ -202,10 +202,8 @@ nav #dropdown li a:hover{
     
 
   }
-@media(max-width:700px){ #textslide1, #testslide2, #testslide3, #testslide4, #testslide5{
-  margin: 0;
-  padding: 0;
-  text-align: center;
+@media(max-width:700px){ .text{
+ display: none;
 }}
   .text{
     position: absolute;
