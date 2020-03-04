@@ -126,6 +126,26 @@
                         </div>
                 </div>
                 </div>
+
+                <div class="bones selectt">
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="resources/images/chapeu/chapeu 1.jpg">
+                        <div class="shop-item-details">
+                            <table>
+                                <span class="shop-item-title">Sol's sunny</span>
+                                <nav >
+                                <table>
+                                     <tr>
+                                        <td class="priceCell">0.86€</td>
+                                        <td><input type="number" class="form-control3 text-center quantity" min="1" max="999" value="1"></td>
+                                      </tr>
+                                       <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>
+                                       <span class="shop-item-price1" id="6">€0.86</span>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+
                 <div class="T-shirts selectt">
                 <div class="shop-item">
                     <img class="shop-item-image" src="resources/images/tshirt/makito hecom 1.05.jpg">
@@ -183,42 +203,44 @@
                 </div>
             </div>
 
-            <div class="bones selectt">
-                <div class="shop-item">
-                    <img class="shop-item-image" src="resources/images/a7.jpg">
-                    <div class="shop-item-details">
-                        <table>
-                            <span class="shop-item-title">Album  786</span>
-                            <nav >
-                            <table>
-                                 <tr>
-                                    <td class="priceCell">9.88€</td>
-                                    <td><input type="number" class="form-control3 text-center quantity" min="1" max="999" value="1"></td>
-                                  </tr>
-                                   <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>
-                                   <span class="shop-item-price1" id="6">€9.88</span>
-                            </table>
-                        </div>
-                </div>
-            </div>
+            
             
             <div class="Camisolas selectt">
             <div class="shop-item" >
-                <img class="shop-item-image" src="resources/images/a8.jpg">
+                <img class="shop-item-image" src="resources/images/sweat/Fruit Manga Inserida 5.37.jpg">
                 <div class="shop-item-details">
                     <table>
-                    <span class="shop-item-title">Album   777777<br></span>
+                    <span class="shop-item-title">Fruit Manga Inserida<br></span>
                     <nav >
                     <table>
                          <tr>
-                            <td class="priceCell">19.88€ </td>
+                            <td class="priceCell">5.37€ </td>
                             <td><input  type="number" class="form-control3 text-center quantity" min="1" max="999" value="1"></td>
                           </tr>
                            <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>               
-                           <span class="shop-item-price1" id="7" >€19.88</span>
+                           <span class="shop-item-price1" id="7" >€5.37</span>
                     </table>
                 </div>
               </div>  
+            </div>
+
+            <div class="trabalho selectt">
+                <div class="shop-item">
+                    <img class="shop-item-image" src="resources/images/trabalho/JN Alta Visibilidade JN 815 2.43.jpg">
+                    <div class="shop-item-details">
+                        <table>
+                            <span class="shop-item-title">SJN Alta Visibilidade JN 815</span>
+                            <nav >
+                            <table>
+                                 <tr>
+                                    <td class="priceCell">2.43€</td>
+                                    <td><input type="number" class="form-control3 text-center quantity" min="1" max="999" value="1"></td>
+                                  </tr>
+                                   <button class="btn btn-primary shop-item-button" class="buttonadd" type="button">To Cart </button>
+                                   <span class="shop-item-price1" id="8">€0.86</span>
+                            </table>
+                        </div>
+                </div>
             </div>
                     </div>
             
@@ -409,6 +431,17 @@ return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
 }).get();
 console.log(totals);
 document.getElementById('7').innerText = '€' + parseFloat(totals[6]).toFixed(2)
+}
+</script>
+<script>
+    $('.quantity').on('change', getTotals);
+function getTotals() {
+var totals = $('.quantity').map(function() {
+var $tr = $(this).closest('tr');
+return parseFloat($tr.find('.priceCell').text()) * parseInt($(this).val(), 10);
+}).get();
+console.log(totals);
+document.getElementById('8').innerText = '€' + parseFloat(totals[6]).toFixed(2)
 }
 </script>
 
