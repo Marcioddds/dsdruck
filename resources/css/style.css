@@ -640,11 +640,11 @@ footer .footer{
   display: flex;
   margin: auto;
 }
-footer #list1{list-style: none;
+footer .list1{list-style: none;
 align-self: center;
 line-height: 300%;}
 
-footer #list1 a{
+footer .list1 a{
   text-decoration: none;
   list-style: none;
   color: white;
@@ -665,7 +665,13 @@ footer #list1 a{
   padding-top: 50px;
  
 }
-
+#lista1{
+  margin-right: 120px;
+  
+}
+#lista2{
+  margin-left: 120px;
+}
 
 
 
