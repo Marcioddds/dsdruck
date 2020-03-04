@@ -106,7 +106,7 @@ nav #dropdown li a:hover{
    color: rgb(180, 179, 179);
     
 }
-#menu:hover .nav ul{
+#menu .nav ul{
     display: flex;
     
     margin-top: 23px;
@@ -123,7 +123,7 @@ nav #dropdown li a:hover{
   padding-right: 100px;
   margin-right: 100px;
   animation: load 1s forwards;
-    
+  animation-duration: 2s;  
 }
 @keyframes load{
     100%{
@@ -608,6 +608,8 @@ footer #buttonsub{
     color: white;
     font-size: 25px;
     padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     
 }
 footer a:hover{
