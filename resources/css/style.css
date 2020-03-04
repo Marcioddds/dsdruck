@@ -4,6 +4,13 @@ body{
   
     
 }
+@media(max-width:700px){.body{ 
+   width: 500px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+  
+}}
 header #navbar{
     width: 100%;
     position: fixed;
@@ -43,7 +50,10 @@ header #contactos{
   display: none;
 }}
 
-
+@media(max-width:700px){#logo{ 
+  margin-right: 40px;
+  
+}}
 
 #logo{
     position: relative;
@@ -75,22 +85,37 @@ nav #dropdown{
    z-index: 2;
    display: none;
    transition: 2s ease-in-out;
-   border-bottom:solid 1px rgb(209, 208, 208);
-  
-  
-    
+   border-bottom:solid 1px rgb(209, 208, 208);   
 }
+@media(max-width:700px){nav #dropdown{
+  display: flex;
+  flex-direction: column;
+  padding-top: 140px;
+  width: 100%;
+  
+
+}}
+@media(max-width:700px){ #dropdown li{
+  height: 25px;
+   background-color: white;
+   width: 100%;
+   text-align: center;
+   margin-left: -80px;
+   height: 30px;
+   line-height: 50px;
+   font-size: 20px;
+   height: 100%;
+
+  
+  
+}}
 nav #dropdown ul {
     padding-left: 0;
     padding-right: 250px;
     float: left;
     padding-right: 100px;
     margin-right: 100px;
-    height: 5px;
-    
-   
-    
-    
+    height: 5px;  
 }
 nav #dropdown a{
     list-style-type: none;
@@ -133,32 +158,8 @@ nav #dropdown li a:hover{
 }
     
 
-@media (max-width: 700px) { #menu:hover .nav ul{
-    display: flex;
-    flex-direction: column;
-    height:600px ;
-    align-items: center;
-    justify-content: space-around;
-    font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-   margin-left: -80px;  
-   background-color: white;
-   color: black;
-}}
-@media (max-width: 700px) { #menu:hover .nav ul li{
-    font-size: 30px; 
-    border-bottom-style: solid;
-    border-color:  rgb(51, 51, 51);
-    width: 100%;
-    padding-bottom: 23px;
-    border-width: .5px;
-    text-align: center;
-    
-}}
-@media (max-width: 700px) { #menu:hover .nav ul li a{
-   
-    color: rgb(51, 51, 51);
-}}
-    
+
+
 .tituloloja{
   text-align: center;
 }
@@ -1002,10 +1003,13 @@ transition-duration: 0.5s;
      row-gap: 20px;
      column-gap: 30px;
      margin: 30px;
-
-   
-     
 }
+@media(max-width:700px){.gridserv{ 
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  
+}}
 .conteudoserv{
 text-align: center;
   background-color: rgb(247, 246, 245) ;
@@ -1017,13 +1021,32 @@ text-align: center;
   opacity: 0.9;
   transition: 1s;
   
+  
 }
+
+@media(max-width:700px){.conteudoserv{ 
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  height: 630px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  
+}}
+@media(max-width:700px){.conteudoserv:hover{ 
+  transform: scale(1);
+  
+}}
 .conteudoserv:hover{
   
     transform: scale(1.1);
     opacity: 0.8;
     cursor: pointer;
 }
+@media(max-width:700px){.texto{ 
+  display: flex;
+  flex-direction: column;
+}}
 .texto{
   display: inline-flex;
   justify-content: space-between;
@@ -1033,6 +1056,13 @@ text-align: center;
   width: 250px;
   padding: 20px;
 }
+@media(max-width:700px){.texto h4, h2{ 
+ margin: 0;
+ padding: 0;
+ width: 90%;
+ 
+}}
+
 .conteudoserv h2{
   border-bottom-style: solid;
   border-color: white;
@@ -1050,6 +1080,11 @@ text-align: center;
 .conteudoserv h4:hover{
   transform: scale(1.1);
 }
+@media(max-width:700px){.imgserv{ 
+  margin: 0;
+  padding: 0;
+ align-self: center;
+}}
 .imgserv{
   height: 200px;
   margin-top: 10px;
@@ -1059,6 +1094,13 @@ text-align: center;
 .imgserv:hover{
   transform: scale(1.1);
 }
+
+@media(max-width:700px){ .btserv { 
+  font-size: 15px;
+  padding: 30px;
+  
+  
+}}
 .btserv{
   text-decoration: none;
   border-width: 1px;
@@ -1089,6 +1131,10 @@ padding-left: 40px;
   text-align: center;
   
 }
+@media(max-width:700px){.tituloserv h4{ 
+  margin: 0;
+  padding: 0;
+}}
 .tituloserv h4{
   border-bottom-style: solid;
   margin: 30px;
