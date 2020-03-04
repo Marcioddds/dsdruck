@@ -15,6 +15,8 @@
   <link rel="stylesheet" type="text/css" href="css/FancyProductDesigner-all.min.css" />
   <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/52c7e2a22d575de980e288f3d/8edae5f2201112667c578ae9d.js");</script>
   <script type="text/javascript"></script>
+  <script defer src="popup.js"></script>
+  
   
 </head>
 <body>
@@ -22,7 +24,7 @@
      <div class="content" id="navbar">
          <div id="menu">
              <ul>
-                 <li><a class="a" id="clickmenu" href="#" onclick="openMenu('dropdown')">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                 <li><a class="a" id="clickmenu" href="#" onclick="openMenu()">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
                     <nav class="nav">
                         <div>
                      <ul id="dropdown" style="display:none">
@@ -47,19 +49,7 @@
          </div>
      </div>
  </header>  
- <script>
-    function openMenu(dropdownName) {
-      var i;
-      var x = document.getElementsByClassName("dropdown");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      document.getElementById(dropdownName).style.display = "flex";  
-    }
 
-  
-
-    </script>
 
    <section class="container">
        <div class="fullBackground">
@@ -72,17 +62,68 @@
         </div>
     </div>
    </section> 
-   <section class="container" id="grid">
-       <div>
-
-       </div>
-   </section>
+   
    <section name="grid" class="grid">
-       <a class="grid1" href="store.html">
-           <p>Descobre a grande variedade de produtos que dispomos para personalizações.</p>
-        <div class="button">
-          <h3>Saber mais</h3></div></a>
-
+       
+        <div class="conteudoserv" id="grid6">
+            <h2>DS Marketing</h2>
+            
+            <span class="texto">
+                <br>
+                <br>
+                <h4>Uma empresa que dispõe de uma variedade de produtos e serviços de qualidade, profissionais experientes e competentes
+                    a pensar na satisfação do cliente. 
+                </h4>
+                <img class="imgserv" src="resources/images/designgrafico.jpg">
+            </span>
+            
+            <br>
+            <h4>Uma empresa que vende em Portugal e exporta para toda a Europa, entra em contacto para mais informaçõesou pedir o teu orçamento. </h4>
+                <br>
+                <a class="btserv" data-modal-target="#modal" href="#">Contacta-nos</a>
+                
+        </div>
+        
+    <section id="formulario">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">Formulário de contato</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="https://formspree.io/mzbgkyop" method="POST" class="p-5 bg-white">
+    
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Nome:</label>
+                            <input type="text" id="nome" class="form-control" name="nome" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="font-weight-bold" for="email">E-mail:</label>
+                            <input type="email" id="mail" class="form-control" name="mail" required>
+                        </div>
+                    </div>
+                    <label class="font-weight-bold" for="message">Mensagem:</label>
+                    <div class="row form-group mb-4">
+                        <div class="col-md-12">
+                            
+                            <textarea name="messagem" id="messagem" cols="30" rows="5" class="form-control1"
+                                placeholder="Estamos ao dispor para resolver as suas duvidas..."></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12 text-center">
+                            <input type="submit" value="Enviar Menssagem"
+                                class="btnformulario">
+                        </div>
+                    </div>
+                </form>
+            </div>
+          </div>
+          <div id="overlay"></div></section>
+        
        <a class="grid2" href="design.html">
         <p>Personaliza tshirts</p>
         <div class="button">
@@ -100,6 +141,30 @@
         <div class="button">
             <h3>Saber mais</h3></div></a>
    </section>
+
+   <section name="grid" class="grid">
+    <a class="grid1" href="store.html">
+        <p>Descobre a grande variedade de produtos que dispomos para personalizações.</p>
+     <div class="button">
+       <h3>Saber mais</h3></div></a>
+
+    <a class="grid2" href="design.html">
+     <p>Personaliza tshirts</p>
+     <div class="button">
+         <h3>Saber mais</h3></div></a>
+
+    <a class="grid3" href="#"><p>Personaliza Bonés</p>
+     <div class="button">
+         <h3>Saber mais</h3></div></a>
+
+    <a class="grid4" href="#"><p>Personaliza Mochilas</p>
+     <div class="button">
+         <h3>Saber mais</h3></div></a>
+
+    <a class="grid5" href="#"><p>Personalize a sua roupa de trabalho</p>
+     <div class="button">
+         <h3>Saber mais</h3></div></a>
+</section>
 
    <footer>
     <section class="footer">
@@ -131,6 +196,18 @@
     
 
 </nav>
+
+
+<script>
+    function openMenu() {
+     var click = document.getElementById("dropdown") ;
+      if(click.style.display === "none"){
+          click.style.display = "flex" ;
+      }else{ 
+          click.style.display = "none" ;
+      }
+    }
+ </script>
 
    <script src="js/jquery.min.js"></script>
    <script src="js/fullclip.min.js"></script>

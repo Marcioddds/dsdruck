@@ -21,6 +21,8 @@
   <script src= 
 "https://code.jquery.com/jquery-1.12.4.min.js"> 
     </script> 
+    <script defer src="popup.js"></script>
+  
   
 </head>
 <body>
@@ -28,10 +30,10 @@
      <div class="content" id="navbar">
          <div id="menu">
              <ul>
-                 <li><a class="a" href="#">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                <li><a class="a" id="clickmenu" href="#" onclick="openMenu()">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
                     <nav class="nav">
                         <div>
-                     <ul id="dropdown">
+                     <ul id="dropdown" style="display:none">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="store.html">Loja</a></li>
                         <li><a href="servicos.html">Serviços</a></li>
@@ -62,11 +64,7 @@
             
         <span style="font-size: 35px;" id="cart"><a href="#cartsection"><i class="fas fa-shopping-cart "></a></i></span>
         
-        <section class="tituloloja">
-            <h2>A LOJA</h2>
-            <h5>Temos á sua disposiçao uma variada gama de artigos para personalizar</h5>
-       </section>
-    </div>
+        
 
     <div id="filterList">
     <label id="tudo" for="bt.todos" >Todos </label> 
@@ -238,7 +236,7 @@
         </section>
         
         <section class="container content-section" id="compras">
-            <h2 class="section-header" id="cartsection">As tuas compras</h2>
+           
             <div class="cart-row" id="cartrow">
                 
                 
@@ -255,10 +253,10 @@
         <footer>
             <section class="footer">
             <ul class="list1" id="lista1">
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">A nossa loja</a></li>
+                <li><a href="aboutus.html">Sobre nós</a></li>
+                <li><a href="store.html">Loja</a></li>
                 <li><a href="#">Cria a identidade da tua empresa</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
             </ul>
             <nav class="newsletter">
                 <h3>Subscreve para receber informações</h3>
@@ -269,8 +267,8 @@
             </div>
             </nav>
             <ul class="list1" id="lista2">
-                <li><a href="#">O nosso contacto</a></li>
-                <li><a href="#">Junta-te a nós</a></li>
+                <li><a href="contato.html">Contacto</a></li>
+                <li><a href="parcerias.html">Parcerias</a></li>
                 <li><a href="#">Devoluçoes</a></li>
                 <li><a href="#">Politicas de privacidade</a></li>
             </ul>
@@ -291,6 +289,16 @@
            <script
            src="https://www.paypal.com/sdk/js?client-id=AWBQbXluQiRbvYKeOC_5-Oo5oFyvkHhIOk6LEBk80XbS51mLZDARtS2EdoZMD3v9Gnl-jD8tw7Jz3_xd&currency=EUR"> 
          </script>
+      <script>
+        function openMenu() {
+         var click = document.getElementById("dropdown") ;
+          if(click.style.display === "none"){
+              click.style.display = "flex" ;
+          }else{ 
+              click.style.display = "none" ;
+          }
+        }
+     </script>
 
  <script>
     paypal.Buttons({

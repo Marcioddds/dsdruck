@@ -22,10 +22,10 @@
      <div class="content" id="navbar">
          <div id="menu">
              <ul>
-                 <li><a class="a" href="#">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                <li><a class="a" id="clickmenu" href="#" onclick="openMenu()">Menu <i class="fas fa-chevron-down fa-xs"></i></a>
                     <nav class="nav">
                         <div>
-                     <ul id="dropdown">
+                     <ul id="dropdown" style="display:none">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="store.html">Loja</a></li>
                         <li><a href="servicos.html">Serviços</a></li>
@@ -53,11 +53,7 @@
  
 
  <body>
-    <div class="tituloserv">
-        <h2>Contacto</h2>
-        <h4>Entra em contato em caso de alguma duvida.  </h4>
-    </div>
-
+    
     <div class="conteudoserv">
         <h2>DS Marketing </h2>
         
@@ -121,10 +117,10 @@
     <footer>
         <section class="footer">
         <ul class="list1" id="lista1">
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">A loja</a></li>
+            <li><a href="aboutus.html">Sobre nós</a></li>
+            <li><a href="store.html">A loja</a></li>
             <li><a href="#">Cria a identidade da tua empresa</a></li>
-            <li><a href="#">Serviços</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
         </ul>
         <nav class="newsletter">
             <h3>Subscreve para receber informações</h3>
@@ -135,8 +131,8 @@
         </div>
         </nav>
         <ul class="list1" id="lista2">
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Junta-te a nós</a></li>
+            <li><a href="contato.html">Contacto</a></li>
+            <li><a href="parcerias.html">Parcerias</a></li>
             <li><a href="#">Devoluçoes</a></li>
             <li><a href="#">Politicas de privacidade</a></li>
         </ul>
@@ -146,7 +142,16 @@
     <nav class="design">
         <span>© 2020 DS, All Rights Reserved | Created by MS</span>
         
-        
+        <script>
+            function openMenu() {
+             var click = document.getElementById("dropdown") ;
+              if(click.style.display === "none"){
+                  click.style.display = "flex" ;
+              }else{ 
+                  click.style.display = "none" ;
+              }
+            }
+         </script>
     
     </nav>
 
