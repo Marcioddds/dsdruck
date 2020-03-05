@@ -5,7 +5,7 @@ body{
     
 }
 @media(max-width:700px){.body{ 
-   width: 500px;
+   
   margin-left: 20px;
   margin-right: 20px;
   
@@ -352,13 +352,15 @@ nav #dropdown li a:hover{
           display: flex;
           flex-direction: column;
           height: fit-content;
-          max-width: 100%;
+         
+          margin: 10px;
           
       }}
 
       @media (max-width: 700px) { .grid1 {
           margin-bottom: 30px;
           height: 400px;
+          width: 97%;
         
     }}
 
@@ -368,22 +370,22 @@ width: 70px;
     @media (max-width: 700px) { .grid2 {
         margin-bottom: 30px;
         height: 400px;
-      
+        width: 97%;
   }}
   @media (max-width: 700px) { .grid3 {
     margin-bottom: 30px;
     height: 400px;
-  
+    width: 97%;
 }}
 @media (max-width: 700px) { .grid4 {
     margin-bottom: 30px;
     height: 400px;
-  
+    width: 97%;
 }}
 @media (max-width: 700px) { .grid5 {
     margin-bottom: 30px;
     height: 400px;
-  
+    width: 97%;
 }}
 
   .grid2{
@@ -1254,7 +1256,8 @@ padding-left: 40px;
 
 @media(max-width:700px){.carousel{
   width: 95%;
-  height: 300px;
+  height: 450px;
+  margin-left: 15px;
 }}
 
 
@@ -1273,6 +1276,12 @@ padding-left: 40px;
   display: inline-flex;
   
 }
+
+@media(max-width:700px){.carousel__prev, .carousel__next {
+  margin-left: 140px ;
+  display: inline-flex;
+  
+}}
 .item__3d-frame__box {
   display: flex;
   flex-direction: column;
@@ -1283,10 +1292,20 @@ padding-left: 40px;
 .carousel h2{
   text-align: center;
 }
+@media(max-width:700px){.carousel h2 {
+  margin-left: 20px;
+  font-size: 20px;
+}}
+
 .carousel img {
 width: 300px;
 height:310px
  }
+ @media(max-width:700px){.carousel img {
+  width: 100%;
+  height: 100%;
+  
+}}
 
 .carousel__prev i, .carousel__next i {
   font-size: 60px;
@@ -1299,7 +1318,7 @@ height:310px
 
 .carousel__body {
   
-  padding: 20px 0 50px 0;
+  padding: 20px 0 20px 0;
   overflow: hidden;
 }
 .carousel__body .carousel__slider {
