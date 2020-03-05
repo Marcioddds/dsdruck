@@ -685,10 +685,9 @@ footer{
   
     position: relative;
     margin: 0;
-    background-color: rgb(196, 194, 194);
+    background-color: rgb(151, 150, 150);
     font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   z-index: 3;
-  
   height: 280px;
   border-style: none;
    background-size: cover;
@@ -699,6 +698,11 @@ footer{
 @media (max-width: 700px) {footer .footer{
   display:flex;
   flex-direction: column;
+  height: 600px;
+}}
+@media (max-width: 700px) {footer{
+
+  height: 400px;
 }}
 
 footer #buttonsub{
@@ -737,12 +741,15 @@ footer h3{
     font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: rgb(102, 101, 101);
     opacity: 0.8;
-    
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 footer .footer{
   display: flex;
   margin: auto;
 }
+
+
 footer .list1{list-style: none;
 align-self: center;
 line-height: 300%;}
@@ -758,6 +765,12 @@ footer .list1 a{
   margin-top: 50px;
   text-align: center;
 }
+@media (max-width: 700px) {.newsletter{
+ position: absolute;
+ margin-top: 250px;
+ text-align: center;
+ margin-left: 100px;
+}}
 .newsletter .redes a{
   color: rgb(250, 249, 249);
   text-decoration: none;
@@ -772,10 +785,18 @@ footer .list1 a{
   margin-right: 150px;
   
 }
+@media (max-width: 700px) {#lista1{
+  margin-right: 220px;
+  font-size: 12px;
+}}
 #lista2{
   margin-left: 150px;
 }
-
+@media (max-width: 700px) {#lista2{
+  margin-left: 110px;
+  position: absolute;
+  font-size: 12px;
+}}
 
 
 /*shopcart*/
@@ -831,7 +852,7 @@ footer .list1 a{
   height: 230px;
 }
 @media (max-width: 700px){.shop-item img{
-  width: 300px;
+  width: 80%;
    
  }}
 .shop-item button{
@@ -927,6 +948,14 @@ table input:hover{
   font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
 }
+@media(max-width:700px){.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+}
+
+
+
 .cart-items button{
   
   margin-top: 30px;
@@ -942,13 +971,18 @@ table input:hover{
 cursor: pointer;
 color: gray;
 }
+.cart-row h2{
+  text-align: center;
+  padding-top: 20px;
+  
+}
 .cart-total{
   text-align: center;
   align-content: center;
   justify-content: center;
  
   font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 30px;
+  font-size: 20px;
 }
 #btncomprar{ font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 30px;
@@ -973,9 +1007,7 @@ transition-duration: 0.5s;
 
 /* filter*/
 
-#filterList input{
-  margin-left: -150px;
-}
+
 @media (max-width: 700px){#tudo #bt.todos{
   display: flex;
   flex-direction: row;
@@ -1283,6 +1315,7 @@ padding-left: 40px;
   position: relative;
   display: block;
   
+  
   box-sizing: border-box;
   z-index: 1;
 }
@@ -1306,9 +1339,17 @@ padding-left: 40px;
 }
 .carousel h5{
   color: black;
+ 
+  font-size: 15px;
+  text-decoration: none;
+  list-style: none;
 }
+.carousel h5:hover{
+  transform: scale(1.1);}
+
 .carousel h2{
   text-align: center;
+  margin-bottom: 40px;
 }
 @media(max-width:700px){.carousel h2 {
   margin-left: 20px;
@@ -1357,8 +1398,7 @@ height:310px
   width: 100%;
   height: 100%;
   transition: transform 1s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  
 }
 .carousel__body .carousel__slider__item .item__3d-frame:after {
   content: '';
