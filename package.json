@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/Marcioddds/dsdruck/issues"
   },
-  "homepage": "https://github.com/Marcioddds/dsdruck#readme"
+  "homepage": "https://github.com/Marcioddds/dsdruck#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "stripe": "^8.28.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
