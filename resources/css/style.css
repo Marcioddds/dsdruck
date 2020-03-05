@@ -178,11 +178,14 @@ nav #dropdown li a:hover{
     left: 0;
     width: 100%;
     height: 450px;
+    margin-bottom: 40px;
      
   }
   @media (max-width: 700px){.fullBackground{
     background-size: contain ;
-    height: 180px;
+    height: 280px;
+    margin-top: 70px;
+    
   }}
 
   
@@ -687,8 +690,8 @@ footer{
     margin: 0;
     background-color: rgb(151, 150, 150);
     font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  z-index: 3;
-  height: 280px;
+  z-index: 1;
+  height:250px;
   border-style: none;
    background-size: cover;
    justify-content: space-between;
@@ -698,11 +701,11 @@ footer{
 @media (max-width: 700px) {footer .footer{
   display:flex;
   flex-direction: column;
-  height: 600px;
+  padding-bottom: 280px;
 }}
 @media (max-width: 700px) {footer{
 
-  height: 400px;
+  height: 480px;
 }}
 
 footer #buttonsub{
@@ -743,6 +746,8 @@ footer h3{
     opacity: 0.8;
     margin-bottom: 0;
     padding-bottom: 0;
+    position: relative;
+    
 }
 footer .footer{
   display: flex;
@@ -767,7 +772,7 @@ footer .list1 a{
 }
 @media (max-width: 700px) {.newsletter{
  position: absolute;
- margin-top: 250px;
+ margin-top: 290px;
  text-align: center;
  margin-left: 100px;
 }}
@@ -1088,9 +1093,11 @@ text-align: center;
   
 }}
 @media(max-width:700px){.conteudoserv:hover{ 
-  transform: scale(1);
+  transform: none;
   
 }}
+
+
 .conteudoserv:hover{
   
     transform: scale(1.1);
@@ -1265,6 +1272,15 @@ padding-left: 40px;
   opacity: 1;
   pointer-events: all;
 }
+
+@media(max-width:700px){.form-control{
+  width: 95%;
+  
+}}
+@media(max-width:700px){.form-control1{
+  width: 95%;
+  
+}}
 .form-control{
   width: 300px;
   margin-bottom: 20px;
@@ -1314,10 +1330,11 @@ padding-left: 40px;
 .carousel {
   position: relative;
   display: block;
-  
+  background-color: rgb(247, 246, 245) ;
   
   box-sizing: border-box;
   z-index: 1;
+  margin-bottom: 50px;
 }
 .carousel__prev, .carousel__next {
   position: relative;
@@ -1330,6 +1347,12 @@ padding-left: 40px;
 
 @media(max-width:700px){.carousel__prev, .carousel__next {
   margin-left: 140px ;
+  display: inline-flex;
+  
+}}
+
+@media(max-width:400px){.carousel__prev, .carousel__next {
+  margin-left: 90px ;
   display: inline-flex;
   
 }}
